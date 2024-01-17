@@ -7,6 +7,12 @@ on:
 
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
+permissions:
+  contents: read
+  issues: read
+  checks: write
+  pull-requests: write
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
