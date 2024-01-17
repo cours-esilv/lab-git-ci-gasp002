@@ -23,9 +23,15 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
 
+      - name: Standard Checkout
+        uses : actions/checkout@v2
+
       # Compile the application with Maven
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
+
+      
+
 
       # Publish Unit Test Results
       - name: Publish Unit Test Results
